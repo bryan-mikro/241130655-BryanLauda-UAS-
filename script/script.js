@@ -14,5 +14,14 @@ document.querySelectorAll('.qty').forEach(qty => {
       number.textContent = val + 1;
     });
   });
+$(".reset").click(function () {
+    $("input[type='text'], input[type='email'], input[type='tel']").val("");
+    $(".produk-card input").val(1);
+    $(".produk-card").each(function () {
+    const harga = parseInt($(this).data("harga"));
+    $(this).find(".harga").text("Rp" + harga.toLocaleString("id-ID"));
+    });
+    $("#totalHarga").hide().empty();
+});
 
  
