@@ -14,7 +14,7 @@ document.querySelectorAll('.qty').forEach(qty => {
       number.textContent = val + 1;
     });
   });
-$(".reset").click(function () {
+  $(".reset").click(function () {
     $("input[type='text'], input[type='email'], input[type='tel']").val("");
     $(".produk-card input").val(1);
     $(".produk-card").each(function () {
@@ -23,5 +23,3 @@ $(".reset").click(function () {
     });
     $("#totalHarga").hide().empty();
 });
-
- 
